@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="shoes.dao.IDeleteDAO">
+
+	<delete id="orderCancel">
+		DELETE FROM SHOES_BUY_LOG WHERE NUM = #{num}
+	</delete>
+
+	<delete id="productDelete">
+		DELETE FROM SHOES_PRODUCT WHERE num = #{num}
+	</delete>
+
+	<delete id="userDelete">
+		DELETE FROM SHOES_MEMBER WHERE ID = #{id}
+	</delete>
+	
+	<delete id="basketDelete">
+		DELETE FROM SHOES_basket WHERE ID = #{id}
+	</delete>
+
+	<delete id="basketSearchDelete">
+		DELETE FROM SHOES_basket WHERE num = #{num}
+	</delete>
+</mapper>

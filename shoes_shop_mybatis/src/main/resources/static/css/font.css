@@ -1,0 +1,35 @@
+* {
+	font-family: 돋움;
+}
+.small{
+	font-size: 10px;
+}
+.normal {
+	font-size: 12px;
+}
+.big{
+	font-size: 16px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.godic {
+	font-family: 맑은고딕;
+}
+.white{
+	color:white;
+}
+.gray{
+	color:rgb(136,136,136);
+}
+.gray2{
+	color:rgb(85,85,85);
+}
+.sale{
+	color:rgb(174,0,0);
+}
+.blue{
+	color:rgb(0,91,219);
+}

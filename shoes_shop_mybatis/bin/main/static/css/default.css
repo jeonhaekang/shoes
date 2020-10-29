@@ -1,0 +1,50 @@
+* {
+	font-family: 돋움;
+}
+
+input{
+	vertical-align:-2px;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
+a {
+	color: black;
+}
+p{
+	margin:0;
+}
+label {
+	margin: 0px;
+}
+hr{
+	margin:8px;
+}
+.p0{
+	padding:0;
+}
+.m0{
+	margin:0;
+}
+
+.searchinput{
+	font-size:12px;
+}
+.searchinput:focus{
+	outline: none;
+}
+.searchselect{
+	font-size:12px;
+	padding:3px 0;
+}
+.searchselect:focus{
+	outline: none;
+}

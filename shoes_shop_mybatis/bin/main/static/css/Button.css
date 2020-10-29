@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.defaultbtn {
+	margin: 0 auto;
+	background-color: rgb(66, 133, 244);
+	color: white;
+}
+
+.smallbtn {
+	border:1px solid rgb(66, 133, 244);
+	padding:5 15px;
+	color:rgb(66, 133, 244);
+	font-size:11px;
+	font-family:굴림;
+}
+.smallbtn2 {
+	border:1px solid rgb(100,100,100);
+	padding:5 15px;
+	color:rgb(100,100,100);
+	font-size:11px;
+	font-family:굴림;
+}
+
+.graybtn{
+	border-radius:5px;
+	border:1px solid rgb(220,220,220);
+	background-color:rgb(240,240,240);
+	padding:3 10px;
+	font-size:11px;
+	font-family:굴림;
+	color: rgb(70,70,70);
+}

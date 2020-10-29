@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.buytitle {
+	margin-top:50px;
+	padding-bottom:10px;
+	border-bottom: 2px solid rgb(119,119,119);
+}
+.buyinput{
+	border:0;
+}
+.buyinput:focus{
+	outline: none;
+}
+.minititle{
+	font-size:20px;
+	margin-top:20px;
+	margin-bottom:5px;
+	font-weight: bold;
+}
+.paybtn{
+	background-color: rgb(34, 113, 242);
+	color: white;
+	font-family: 맑은고딕;
+	padding:15px;
+	margin-top:50px;
+	width:400px;
+}

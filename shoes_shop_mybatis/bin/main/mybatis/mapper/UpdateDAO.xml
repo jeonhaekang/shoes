@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="shoes.dao.IUpdateDAO">
+
+	<update id="answerWrite">
+		UPDATE SHOES_qna SET answer=#{answer} WHERE num=#{num}
+	</update>
+	
+	<update id="userModify"> 
+		UPDATE SHOES_MEMBER SET NAME=#{member.name},
+								ADDRESS=#{member.address},
+								EMAIL=#{member.email},
+								PHONE=#{member.phone},
+								GENDER=#{member.gender} WHERE ID=#{member.id}
+	</update>
+	
+	<update id="passwordChange"> 
+		UPDATE SHOES_MEMBER SET PASSWORD= #{password} WHERE ID = #{id}
+	</update>
+	
+	<update id="pointUpdate">
+		UPDATE SHOES_MEMBER SET point=${point} WHERE id=#{id}
+	</update>
+	
+	<update id="orderStateChange">
+		UPDATE SHOES_BUY_LOG SET STATE=${state} WHERE num = #{num}
+	</update>
+	
+	<update id="productModify">
+		UPDATE SHOES_PRODUCT SET NAME=#{product.name},
+		PRICE=#{product.price},
+		SIZE220=#{product.size220},
+		SIZE230=#{product.size230},
+		SIZE240=#{product.size240},
+		SIZE250=#{product.size250},
+		SIZE260=#{product.size260},
+		SIZE270=#{product.size270},
+		CATEGORY=#{product.category, jdbcType=INTEGER },
+		ARRIVAL=#{product.arrival, jdbcType=INTEGER },
+		BEST=#{product.best, jdbcType=INTEGER },
+		SALE=#{product.sale, jdbcType=INTEGER } WHERE NAME=#{product.name}
+	</update>
+	
+	<update id="reviewStateUpdate">
+		UPDATE shoes_buy_log SET review=1 WHERE num=#{num}
+	</update>
+	
+	<update id="stockUpdate">
+		UPDATE SHOES_PRODUCT SET ${size}=${stock} WHERE NAME=#{name}
+	</update>
+	
+	<update id="userRankUpdate">
+		UPDATE SHOES_MEMBER SET rank = #{rank} WHERE ID=#{ID}
+	</update>
+	
+	<update id="orderModify">
+		UPDATE SHOES_BUY_LOG SET NAME=#{dto.name},
+		EMAIL=#{dto.email},
+		phone=#{dto.phone},
+		add_name=#{dto.add_name},
+		add_phone=#{dto.add_phone},
+		add_address=#{dto.add_address},
+		add_message=#{dto.add_message},
+		state=#{dto.state} WHERE num=#{dto.num}
+	</update>
+</mapper>

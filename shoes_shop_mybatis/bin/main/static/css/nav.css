@@ -1,0 +1,87 @@
+*, body{
+	font-family: 돋움;
+	margin:0px;
+	padding:0px;
+}
+
+/* nav 배경색, 중앙정렬 */
+.mainnav {
+	background-color: white;
+	text-align: center;
+}
+.subnav{
+	background-color: rgb(240,240,240);
+	font-size:11px;
+}
+.subnavul{
+	margin:0;
+}
+.subnavul li{
+	display: inline-block;
+	padding:10px;
+}
+/* 타이틀 */
+.navtitle, .navtitle:hover {
+	color:black;
+	text-decoration:none;
+	font-size: 30px;
+	vertical-align: middle;
+}
+/* 로그인/회원가입 아이콘 */
+.peopleicon {
+	width: 15px;
+	margin-bottom: 2px;
+}
+
+/* 검색박스 */
+.searchtext {
+	padding: 0 6px;
+	margin-left: 5px;
+	border: 0px;
+	background-color: white;
+	font-size: 16px;
+}
+.searchbox {
+	background-color: white;
+	border: 2px solid rgb(66, 133, 244);
+	margin: 10px 30px;
+}
+.searchbtn {
+	border: 0px;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	width: 45px;
+	background-color: rgb(66, 133, 244);
+}
+.searchform {
+	display: inline-block;
+	margin-bottom: 0px;
+}
+
+.categoryul li {
+	display: inline;
+	font-size: 12px;
+}
+
+.categoryul {
+	margin: 0;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+}
+.navul, .navul li {
+	list-style: none;
+	display: inline-block;
+	font-size: 14px;
+	padding: 0;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.message{
+	background-color: rgb(250,250,250);
+	border:1px solid rgb(238,238,238);
+	font-size:12px;
+	padding:7px;
+}

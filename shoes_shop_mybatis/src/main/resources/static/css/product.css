@@ -1,0 +1,70 @@
+@charset "UTF-8";
+.star{
+	color:rgb(255,150,0);
+}
+
+.img-thumbnail {
+	border: 0;
+}
+
+.smallimg {
+	width: 100px;
+	height: 100px;
+	background-size: cover;
+}
+
+.listAtag:hover {
+	text-decoration: none;
+}
+
+.basketbtn {
+	width: 30%;
+	padding: 10px 0;
+	margin: 20px 10px;
+	border: 1px solid rgb(200, 200, 200);
+}
+
+.buybtn {
+	color: #808080;
+	background-color: rgb(66, 133, 244);
+	width: 60%;
+	padding: 10px 0;
+}
+
+/* 작은 아이콘 */
+.men {
+	background-color: skyblue;
+	color: white;
+	border-radius: 3px;
+	font-size: 10px;
+	width: 27px;
+	text-align: center;
+}
+
+.women {
+	background-color: pink;
+	color: white;
+	border-radius: 3px;
+	font-size: 10px;
+	width: 45px;
+	text-align: center;
+}
+
+.new {
+	background-color: orange;
+	color: white;
+	border-radius: 3px;
+	font-size: 10px;
+	width: 27px;
+	text-align: center;
+}
+
+.best {
+	background-color: rgb(241, 80, 88);
+	color: white;
+	border-radius: 3px;
+	font-size: 10px;
+	width: 29px;
+	text-align: center;
+}
+/* 작은 아이콘 */

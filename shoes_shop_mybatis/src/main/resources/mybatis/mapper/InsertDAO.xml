@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="shoes.dao.IInsertDAO">
+
+	<insert id="buyInsert">
+	insert into shoes_buy_log (num, id, email,productname,category , phone, price, shoesize, name, 
+							   add_address, add_name, add_phone, add_message, pay, review, reg, state, save, savestate)
+	 values (buy_seq.nextval, 
+	 		#{dto.id}, 
+	 		#{dto.email},
+	 		#{dto.productname},
+	 		#{dto.category}, 
+	 		#{dto.phone}, 
+	 		#{dto.price},
+	 		#{dto.shoesize}, 
+	 		#{dto.name}, 
+	 		#{dto.add_address},
+	 		#{dto.add_name},
+	 		#{dto.phone},
+	 		#{dto.add_message},
+	 		#{dto.pay},0,
+	 		#{dto.reg},
+	 		0,#{dto.save},0)
+	</insert>
+	
+	<insert id="faqWrite">
+		insert into shoes_faq (num, title, content) values
+		(faq_seq.nextval, #{faqdto.title}, #{faqdto.content})
+	</insert>
+	
+	<insert id="joinAction" >
+	insert into shoes_member (reg, id, password, name, address, email, phone, gender, point, rank)
+	values (#{member.reg},
+			#{member.id},
+			#{member.password},
+			#{member.name},
+			#{member.address},
+			#{member.email},
+			#{member.phone},
+			#{member.gender}, 0, 0)
+	</insert>
+	
+	<insert id="productInsert">
+	insert into shoes_product (num,reg, name, price, size220, size230, size240,
+							 size250, size260, size270, category, arrival, best, sale,
+							 image1,image2,image3,image4,image5)
+	values (product_seq.nextval,
+			#{product.reg},
+		    #{product.name}, 
+		    #{product.price}, 0, 0, 0, 0, 0, 0, 
+		    #{product.category}, 1, 0, 0,
+		    #{product.image1, jdbcType=VARCHAR},
+		    #{product.image2, jdbcType=VARCHAR},
+		    #{product.image3, jdbcType=VARCHAR},
+		    #{product.image4, jdbcType=VARCHAR},
+		    #{product.image5, jdbcType=VARCHAR})
+	</insert>
+	
+	<insert id="qnaWrite">
+		insert into shoes_qna (num ,id, category, writer, email, phone, title, content, reg) values
+		(qna_seq.nextval, #{qnadto.id}, #{qnadto.category}, #{qnadto.writer}, #{qnadto.email}, #{qnadto.phone}, #{qnadto.title}, #{qnadto.content}, #{qnadto.reg})
+	</insert>
+	
+	<insert id="reviewWrite">
+		insert into shoes_review (id, name, shoesize, title, content, score) values
+		(#{dto.id}, #{dto.name},#{dto.shoesize},#{dto.title},#{dto.content},#{dto.score})
+	</insert>
+	
+	<insert id="basketInsert">
+		insert into shoes_basket (num, id, name, shoesize, reg) values
+		(basket_seq.nextval,#{dto.id}, #{dto.name}, #{dto.shoesize}, #{dto.reg} )
+	</insert>
+	
+</mapper>

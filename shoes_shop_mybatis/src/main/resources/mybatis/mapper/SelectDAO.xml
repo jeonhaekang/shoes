@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="shoes.dao.ISelectDAO">
+
+	<select id="qnaListAll" resultType="shoes.dto.QnaDTO">
+		select * from shoes_qna order by num desc
+	</select>
+	
+	<select id="orderListMy" resultType="shoes.dto.BuyDTO">
+		select * from shoes_buy_log where id = #{id} order by reg desc
+	</select>
+	
+	<select id="faqList" resultType="shoes.dto.FaqDTO">
+		select * from shoes_faq order by num asc
+	</select>
+	
+	<select id="idSearch" resultType="shoes.dto.MemberDTO"> 
+		select shoes_member.*, shoes_rank.sale, shoes_rank.save
+		from shoes_member inner join shoes_rank
+		on shoes_member.rank = shoes_rank.rank where id = #{id}
+	</select>
+	
+	<select id="login" resultType="shoes.dto.MemberDTO"> 
+		select * from shoes_member where id = #{member.id}
+	</select>
+	
+	<select id="userList" resultType="shoes.dto.MemberDTO"> 
+		select shoes_member.*, shoes_rank.sale, shoes_rank.save
+		from shoes_member inner join shoes_rank
+		on shoes_member.rank = shoes_rank.rank
+	</select>
+	
+	<select id="orderList" resultType="shoes.dto.BuyDTO">
+		select * from shoes_buy_log order by reg desc
+	</select>
+	
+	<select id="orderSearch" resultType="shoes.dto.BuyDTO">
+		select * from shoes_buy_log where num = #{num}
+	</select>
+	
+	<select id="orderSearchList" resultType="shoes.dto.BuyDTO">
+		select * from shoes_buy_log where ${category} like '%'||#{keyword}||'%' order by num desc
+	</select>
+	
+	<select id="productSearchList" resultType="shoes.dto.ProductDTO">
+		select * from shoes_product where ${category} like '%'||#{keyword}||'%' order by num desc
+	</select>
+	
+	<select id="pointGet" resultType="int">
+		select point from shoes_member where id = #{id}
+	</select>
+	
+	<select id="align" resultType="shoes.dto.ProductDTO">
+		<if test='page.equals("sale")'>
+			SELECT * FROM shoes_product WHERE sale != 0 ORDER BY price ${state}
+		</if>
+		<if test='page.equals("new")'>
+			SELECT * FROM shoes_product WHERE arrival = 1 ORDER BY price ${state}
+		</if>
+		<if test='page.equals("men")'>
+			SELECT * FROM shoes_product WHERE category = 1 ORDER BY price ${state}
+		</if>
+		<if test='page.equals("women")'>
+			SELECT * FROM shoes_product WHERE category = 2 ORDER BY price ${state}
+		</if>
+	</select>
+	
+	<select id="productSearch" resultType="shoes.dto.ProductDTO">
+		select * from shoes_product where name= #{name}
+	</select>
+	
+	<select id="productList" resultType="shoes.dto.ProductDTO">
+		select * from shoes_product order by num desc
+	</select>
+	
+	<select id="productStateList" resultType="shoes.dto.ProductDTO">
+		<if test='page eq "sale"'>
+			select * from shoes_product where sale != 0
+		</if>
+		<if test='page eq "new"'>
+			select * from shoes_product where arrival = 1
+		</if>
+		<if test='page eq "men"'>
+			select * from shoes_product where category = 1
+		</if>
+		<if test='page eq "women"'>
+			select * from shoes_product where category = 2
+		</if>
+	</select>
+	
+	<select id="search" resultType="shoes.dto.ProductDTO">
+		select * from shoes_product where name like '%' || #{search} || '%' order by num desc
+	</select>
+	
+	<select id="qnaSearch" resultType="shoes.dto.QnaDTO">
+		select * from shoes_qna where num = #{num}
+	</select>
+	
+	<select id="qnaListMy" resultType="shoes.dto.QnaDTO">
+		select * from shoes_qna where id = #{id} order by num desc
+	</select>
+	
+	<select id="reviewSearch" resultType="shoes.dto.BuyDTO">
+		select * from shoes_buy_log where num = #{name}
+	</select>
+	
+	<select id="stockGet" resultType="int">
+		select ${size} from shoes_product where name = #{name}
+	</select>
+	
+	<select id="reviewListMy" resultType="shoes.dto.ReviewDTO">
+		select * from shoes_review where name = #{name}
+	</select>
+	
+	<select id="basketListMy" resultType="shoes.dto.BasketDTO">
+		select shoes_basket.*, shoes_product.price, shoes_product.category, shoes_product.sale 
+		from shoes_basket 
+		inner join shoes_product 
+		on shoes_basket.name = shoes_product.name where id = #{id}
+	</select>
+	
+	<select id="productPagination" resultType="shoes.dto.ProductDTO">
+		SELECT rnum , T.* FROM ( SELECT ROWNUM AS rnum , S.* FROM shoes_product S) T 
+		WHERE rnum BETWEEN ${pagination.startIndex} 
+		AND ${pagination.endIndex} order by num desc
+	</select>
+</mapper>

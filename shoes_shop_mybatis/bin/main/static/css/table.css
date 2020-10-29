@@ -1,0 +1,140 @@
+.basictable {
+	border-top: 2px solid rgb(150, 150, 150);
+	width:100%;
+}
+.graytable {
+	border-top: 2px solid rgb(206,206,206);
+	width:100%;
+}
+
+
+.basictable td {
+	border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.graytable td {
+	border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.titletd {
+	background-color: rgb(238,241,248);
+	font-size: 14px;
+	padding: 15px;
+	font-family: 맑은고딕;
+	font-weight: bold;
+}
+
+.contenttd {
+	font-size: 14px;
+	padding-left: 5px;
+	font-family: 맑은고딕;
+}
+
+.btntd {
+	background-color: rgb(34, 113, 242);
+	color: white;
+	font-family: 맑은고딕;
+	padding:10px;
+}
+.btntd:hover {
+	text-decoration:none;
+	color: white;
+}
+
+.listth th{
+	font-size: 14px;
+	font-family: 맑은고딕;
+	background-color: rgb(238,241,248);
+	padding:10px;
+	border-bottom:1px solid rgb(228,228,228);
+}
+
+.graylistth th{
+	font-size: 14px;
+	font-family: 맑은고딕;
+	background-color: rgb(244,244,244);
+	padding:10px;
+	border-bottom:1px solid rgb(228,228,228);
+}
+
+.nonlistth th{
+	font-size: 14px;
+	font-family: 맑은고딕;
+	padding:10px;
+	border-bottom:1px solid rgb(228,228,228);
+}
+
+.listtd td{
+	font-size: 14px;
+	padding-left: 5px;
+	font-family: 맑은고딕;
+	padding:10px;
+}
+
+.admintable{
+	border-collapse: separate;
+	border-spacing: 20px;
+	margin:50px auto;
+}
+.admintable td{
+	border:1px solid rgb(200,200,200);
+	border-radius: 15px;
+	padding:15px;
+}
+.admintable label{
+	font-family: 맑은고딕;
+	font-size: 27px;
+	margin-left: 20px;
+}
+.admintable a{
+	text-decoration: none;
+}
+
+.statebtn{
+	padding:0px 2px;
+	font-size:12px;
+	color:white;
+	border-radius: 5px;
+}
+
+
+.ordertable{
+	width:100%;
+	font-size:12px;
+}
+.ordertable td{
+	border:1px solid rgb(200,200,200);
+	border-collapse:collapse;
+}
+.orderinfo{
+	background-color: rgb(246,246,246);
+	border:1px solid rgb(198,198,198);
+	border-bottom:0;
+}
+.orderinfo label{
+	padding:15px;
+	font-size:12px;
+}
+.line{
+	border-right:1px solid rgb(200,200,200);
+}
+
+
+.orderdetailtable{
+	width:100%;
+	font-size:12px;
+	border-bottom:1px solid rgb(51,51,51);
+}
+.orderdetailtable td, .orderdetailtable label{
+	font-size:12px;
+	padding:10px 0;
+}
+
+.orderdetailtitle{
+	border-bottom:2px solid rgb(51,51,51);
+}
+
+.orderdetailtitle label{
+	font-size:12px;
+	padding:10px 0;
+}
